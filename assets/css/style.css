@@ -1,0 +1,75 @@
+ul{
+  list-style: none;
+  padding: 0px;
+}
+.putih{
+  color: white;
+}
+.modal{
+  color: black;
+}
+.font10{
+  font-size: 10px;
+}
+.landing-page{
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+  background-attachment: fixed;
+  height: 725px;
+  color: white;
+}
+.landing-page .prologue{
+  padding-top: 60px;
+}
+.navbar-bold{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 50px;
+}
+.prologue{
+  padding: 50px 0px;
+}
+.fitur{
+  margin-top: 20px;
+  background: #F2F5F7;;
+  color: black;
+  padding: 80px 0px;
+}
+.gambar{
+  width: 200px;
+}
+.pesan{
+  background: #0D243C;
+  padding: 30px 0px;
+  color: white;
+}
+.kaki{
+  padding-top: 20px;
+  background: linear-gradient(to bottom, #343158 0%, #305871 100%);
+  color: white;
+}
+.nav-dinamis{
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px 0px;
+}
+.header-kelas{
+  background: linear-gradient(to bottom, #343158 0%, #305871 100%);
+  color: white;
+  padding: 30px 0px;
+}
+.login{
+  padding: 50px 0px;
+}
+a{
+  color: black;
+}
+.padtop100{
+  padding-top: 100px
+}
+.kategori{
+  padding-top: 30px;
+}
