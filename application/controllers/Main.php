@@ -18,7 +18,7 @@ class Main extends MY_Controller {
 		$password = $this->input->post('password');
 		$where = array(
 			'username' => $username,
-			'password' => $password
+			'password' => md5($password)
 			);
 
 		$cek = $this->Md_database->cek_login("user",$where)->num_rows();
@@ -28,6 +28,7 @@ class Main extends MY_Controller {
  
 			$data_session = array(
 				'nama' => $username,
+				'id' => $user['id_user'],
 				'level' => $user['level'],
 				'status' => "login"
 				);
@@ -58,12 +59,12 @@ class Main extends MY_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('flash', 'gagal');
+			$this->session->set_flashdata('flash', 'benar');
 			redirect(base_url());
 		}else{
 			$this->Md_database->tambahDT();
-			$this->session->set_flashdata('flash', 'benar');
-			redirect('user');
+			$this->session->set_flashdata('flash', 'terdaftar');
+			redirect('main');
 		}
 	}
 }

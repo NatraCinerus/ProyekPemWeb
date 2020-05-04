@@ -48,7 +48,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url('user'); ?>" class="nav-link">
+            <a href="<?php echo base_url('panel/user'); ?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Users
@@ -56,7 +56,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo '#';//base_url('kelas'); ?>" class="nav-link">
+            <a href="<?php echo base_url('panel/kelas'); ?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Kelas

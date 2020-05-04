@@ -15,26 +15,27 @@
                     </div>
                   <?php endif; ?>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Username</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="username" value="<?php echo $user['username'] ?>">
+                    <label>Nama Kelas</label>
+                    <input type="text" class="form-control"placeholder="Nama kelas" name="nama_kelas">
                   </div>
                   <div class="form-group">
-                    <label>Level</label>
+                    <label>Poin Kelas</label>
+                    <input type="number" class="form-control"placeholder="Poin kelas" name="poin">
+                  </div>
+                  <div class="form-group">
+                    <label>Level Kelas</label>
                         <select class="custom-select mr-sm-2" name="level">
                           <?php foreach ($level as $key) :?>
-                            <?php if ($key == $user['level']) :?>
-                              <option value="<?php echo $key ?>" selected><?php echo $key ?></option>
-                            <?php else : ?>
-                              <option value="<?php echo $key ?>"><?php echo $key ?></option>
-                            <?php endif; ?>
+                            <option value="<?php echo $key ?>"><?php echo $key ?></option>
+
                           <?php endforeach; ?>
                         </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value="">
+                    <label>Deskripsi Kelas</label>
+                    <textarea class="form-control" rows="3" placeholder="Deskripsi ..." name="deskripsi"></textarea>
                   </div>
-                  <input type="hidden" name="id" value="<?php echo $user['id_user']; ?>">
+                  <input type="hidden" name="date" value="<?php echo date("Y-m-d")?>">
                 <div class="card-footer">
                   <input type="submit" class="btn btn-primary" value="Submit">
                 </div>

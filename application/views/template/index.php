@@ -9,6 +9,34 @@
 	<title>Home</title>
 </head>
 <body>
+  	<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="padding: 0px">
+  	<?php if ($this->session->flashdata('flash') == 'salah') : ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" align="center" style="margin: 0px">
+                    Username atau Password <strong> <?php echo $this->session->flashdata('flash'); ?> </strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+	<?php elseif ($this->session->flashdata('flash') == 'terdaftar') : ?>
+				<div class="alert alert-success alert-dismissible fade show" role="alert" align="center" style="margin: 0px">
+                    Anda berhasil <strong> <?php echo $this->session->flashdata('flash'); ?> </strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    <?php else : ?>
+    			<div class="alert alert-warning alert-dismissible fade show" role="alert" align="center" style="margin: 0px">
+                    Masukkan username dan password dengan <strong> <?php echo $this->session->flashdata('flash'); ?> </strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+	<?php endif; ?>
+            </div>
+        </div>
+    </div>
 <div class="landing-page">
 	<?php echo $headernya; ?>
 	<?php echo $contentnya; ?>

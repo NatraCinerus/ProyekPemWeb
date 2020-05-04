@@ -8,3 +8,10 @@ db pass : Tugas-PPW-2020
 Cpanel
 username : aries.blood999@gmail.com
 password : aries1999
+
+sekolah koding diberi ikon
+apakah sudah MVC/CI?
+di halaman panel ada tombol logout
+pesan password salah ditampilkan menggunakan notif yang menempel di halaman, jangan menggunakan alert
+ketika menghapus diri sendiri, harusnya ada kondisi khusus
+tambahkan favicon

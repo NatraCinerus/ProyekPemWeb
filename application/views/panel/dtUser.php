@@ -10,7 +10,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body p-0">
-                <a href="<?php echo base_url('user/addUser'); ?>" style="margin-right: 5px;float: right;margin-top: 10px;">
+                <a href="<?php echo base_url('panel/addUser'); ?>" style="margin-right: 5px;float: right;margin-top: 10px;">
                   <button class="btn btn-primary">Tambah</button>
                 </a>
                 <?php if ($this->session->flashdata('flash')) : ?>
@@ -43,8 +43,8 @@
                         <td><?php echo $key['username'] ?></td>
                         <td><?php echo $key['level'] ?></td>
                         <td>
-                          <a href="<?php echo base_url('user/hapus/')."/".$key['id_user'] ?>" class="btn btn-danger" onclick="return confirm('anda yakin ingin menghapus?')">Hapus</a>
-                          <a href="<?php echo base_url('user/editUser/')."/".$key['id_user'] ?>" class="btn btn-warning">Edit</a>
+                          <a href="<?php echo base_url('panel/hapusUser/')."/".$key['id_user'] ?>" class="btn btn-danger" onclick="return confirm('anda yakin ingin menghapus?')">Hapus</a>
+                          <a href="<?php echo base_url('panel/editUser/')."/".$key['id_user'] ?>" class="btn btn-warning">Edit</a>
                         </td>
                       </tr>
                     <?php endforeach; ?>

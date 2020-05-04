@@ -43,16 +43,3 @@
 		</div>
 	</div>
 </footer>
-<?php if ( $this->session->flashdata('flash') == 'salah' ) : ?>
-  <script>
-    alert('username atau password salah');
-  </script>
-<?php elseif( $this->session->flashdata('flash') == 'benar' ) : ?>
-	<script>
-    alert('Anda berhasil mendaftar');
-  </script>
-<?php elseif( $this->session->flashdata('flash') == 'gagal' ) : ?>
-	<script>
-    alert('username atau password kosong');
-  </script>
-<?php endif; ?>
