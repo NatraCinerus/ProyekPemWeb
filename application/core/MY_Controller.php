@@ -28,5 +28,14 @@ class MY_Controller extends CI_Controller{
         
         $this->load->view('template/kelas', $data);
     }
+    function vUser($content, $data = NULL)
+    {
+        $data['navbar'] = $this->load->view('template/kelas/navbar', $data, TRUE);
+        $data['headernya'] = $this->load->view('template/user/header-user', $data, TRUE);
+        $data['contentnya'] = $this->load->view($content, $data, TRUE);
+        $data['footernya'] = $this->load->view('template/home/footer', $data, TRUE);
+        
+        $this->load->view('template/kelas', $data);
+    }
 }
 

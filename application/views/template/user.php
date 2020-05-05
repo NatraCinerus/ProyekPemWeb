@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-	<title>Kelas</title>
+	<title>User</title>
 </head>
 <body>
 	<?php echo $navbar; ?>

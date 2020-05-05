@@ -11,5 +11,8 @@ class User extends MY_Controller {
 		}
 	}
 
-	
+	public function index(){
+		$this->vUser('template/user/infoUser');
+	}
+
 }

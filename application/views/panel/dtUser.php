@@ -43,7 +43,7 @@
                         <td><?php echo $key['username'] ?></td>
                         <td><?php echo $key['level'] ?></td>
                         <td>
-                          <a href="<?php echo base_url('panel/hapusUser/')."/".$key['id_user'] ?>" class="btn btn-danger" onclick="return confirm('anda yakin ingin menghapus?')">Hapus</a>
+                          <a href="#" class="btn btn-danger" onclick="hapus(<?php echo $key['id_user']; ?>)">Hapus</a>
                           <a href="<?php echo base_url('panel/editUser/')."/".$key['id_user'] ?>" class="btn btn-warning">Edit</a>
                         </td>
                       </tr>
@@ -58,3 +58,21 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+<script>
+  function hapus(id) {
+    var id_user = <?php echo $this->session->userdata('id'); ?>;
+    var hapusDiri = "<?php echo base_url('panel/hapusDiri/'); ?>"+id;
+    var hapus = "<?php echo base_url('panel/hapusUser/'); ?>"+id;
+    if (id_user == id) {
+      var cek = confirm('Anda akan langsung terlogout setelah menghapus akun anda!Yakin?');
+      if (cek == true) {
+        window.location.href = hapusDiri;
+      } 
+    }else{
+       var cek = confirm('anda yakin ingin menghapus?');
+       if (cek == true) {
+        window.location.href = hapus;
+      } 
+    }
+  }
+</script>

@@ -166,8 +166,81 @@ class Panel extends MY_Controller {
 			$this->vPanel('panel/addMateri', $data);
 		}else{
 			$this->Md_database->addMateri();
-			$this->session->set_flashdata('flash', 'Ditambahkan');
+			$this->session->set_flashdata('materi', 'Ditambahkan');
 			redirect('panel/kelas');
 		}
+	}
+
+	public function editMateri($id)
+	{
+		if ($this->session->userdata('level') != "admin") {
+			redirect(base_url());
+		}
+		$data['judul'] = 'Edit Materi';
+		$data['materi'] = $this->Md_database->getMateriId($id);
+
+		$this->form_validation->set_rules('judul', 'Judul', 'required');
+		$this->form_validation->set_rules('link', 'Link', 'required');
+		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
+
+		if ($this->form_validation->run() == FALSE) {
+			$this->vPanel('panel/editMateri', $data);
+		}else{
+			$this->Md_database->editMateri();
+			$this->session->set_flashdata('materi', 'Ditambahkan');
+			redirect('panel/kelas');
+		}
+	}
+
+	public function hapusMateri($id)
+	{
+		if ($this->session->userdata('level') != "admin") {
+			redirect(base_url());
+		}
+
+		$this->Md_database->hapusDTMateri($id);
+		$this->session->set_flashdata('materi', 'Dihapus');
+		redirect('panel/kelas');
+	}
+
+	public function kategori()
+	{
+		if ($this->session->userdata('level') != "admin") {
+			redirect(base_url());
+		}
+		$data['judul'] = 'Kategori';
+		$data['kategori'] = $this->Md_database->getKategori();
+		$this->vPanel('panel/dtKategori', $data);
+	}
+
+	public function addKategori()
+	{
+		$this->Md_database->addKategori();
+		$this->session->set_flashdata('flash', 'Ditambahkan');
+		redirect('panel/kategori');
+	}
+
+	public function EditKategori()
+	{
+		$this->Md_database->editDTKategori();
+		$this->session->set_flashdata('flash', 'Diubah');
+		redirect('panel/kategori');
+	}
+
+	public function hapusKategori($id)
+	{
+		if ($this->session->userdata('level') != "admin") {
+			redirect(base_url());
+		}
+		$this->Md_database->hapusDTKategori($id);
+		$this->session->set_flashdata('flash', 'Dihapus');
+		redirect('panel/kategori');
+	}
+
+	public function hapusDiri($id)
+	{
+		$this->Md_database->hapusDT($id);
+		$this->session->sess_destroy();
+		redirect(base_url());
 	}
 }

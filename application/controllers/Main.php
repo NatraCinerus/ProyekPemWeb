@@ -43,7 +43,7 @@ class Main extends MY_Controller {
 			
  
 		}else{
-			$this->session->set_flashdata('flash', 'salah');
+			$this->session->set_flashdata('info', 'salah');
 			redirect(base_url());
 		}
 	}
@@ -59,11 +59,11 @@ class Main extends MY_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('flash', 'benar');
+			$this->session->set_flashdata('info', 'benar');
 			redirect(base_url());
 		}else{
 			$this->Md_database->tambahDT();
-			$this->session->set_flashdata('flash', 'terdaftar');
+			$this->session->set_flashdata('info', 'terdaftar');
 			redirect('main');
 		}
 	}

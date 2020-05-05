@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="navbar navbar-expand-md  nav-dinamis">
       <div class="mx-auto order-0">
-          <a class="navbar-brand mx-auto" href="../ProyekPemWeb">Sekolah Koding</a>
+          <a class="navbar-brand mx-auto" href="<?php echo base_url() ?>">Sekolah Koding</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
               <span class="navbar-toggler-icon"></span>
           </button>

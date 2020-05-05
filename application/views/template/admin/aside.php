@@ -37,8 +37,6 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="<?php echo base_url('panel'); ?>" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -49,7 +47,7 @@
           </li>
           <li class="nav-item">
             <a href="<?php echo base_url('panel/user'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
               </p>
@@ -57,15 +55,23 @@
           </li>
           <li class="nav-item">
             <a href="<?php echo base_url('panel/kelas'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-university"></i>
               <p>
                 Kelas
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="<?php echo base_url('panel/kategori'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-atom"></i>
+              <p>
+                Kategori
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="<?php echo base_url('main/logout'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>

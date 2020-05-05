@@ -24,7 +24,17 @@
                       </div>
                     </div>
                   </div>
-                  
+                <?php elseif ($this->session->flashdata('materi')) :?>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Materi<strong> Berhasil </strong><?php echo $this->session->flashdata('materi'); ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 <?php endif; ?>
                 <table class="table table-striped">
                   <thead>
@@ -80,10 +90,12 @@
             <?php if ($key['id_kelas'] == $dtKelas['id_kelas']) :?>
             <div class="alert alert-success" role="alert">
               <h4 class="alert-heading" style="display: inline;"><?php echo $dtKelas['judul_video']; ?></h4>
-              <div align="right">
-                <i class="fa fa-edit"></i>
-                <i class="fa fa-trash"></i>
-              </div>
+              <a href="<?php echo base_url('panel/editMateri')."/".$dtKelas['id_video']; ?>">
+                <i class="fa fa-edit" style="float: right; margin: 5px"></i>
+              </a>
+              <a href="<?php echo base_url('panel/hapusMateri')."/".$dtKelas['id_video']; ?>">
+                <i class="fa fa-trash" style="float: right; margin: 5px" onclick="return confirm('anda yakin ingin menghapus?')"></i>
+              </a>
               <br>
               <small><?php echo $dtKelas['link']; ?></small>
               <hr>
